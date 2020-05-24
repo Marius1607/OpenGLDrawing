@@ -6,6 +6,7 @@
 #include <Line.h>
 #include <Triangle.h>
 #include <Rectangle.h>
+#include <Airplane.h>
 
 #define PI 3.1415
 void drawSinus()
@@ -36,19 +37,19 @@ void drawLineAnimation()
 
 void testLine()
 {
-    Line line(-200,0, 200, 100);
+    Line line(0,0, 0, 290);
     line.draw();
 }
 
 void testTriangle()
 {
-    Triangle triangle(-200,0, 200, 100, 300, 150, true);
+    Triangle triangle(0,0,-10,-20,10,-20,false);
     triangle.draw();
 }
 
 void testPoint()
 {
-    Point point(100, 200);
+    Point point(500, 500);
     point.draw();
 }
 
@@ -60,8 +61,7 @@ void testRectangle()
 
 int main(int argc, char ** argv)
 {
-    initEngineGlut(argc, argv);
+
     testRectangle();
-    //drawLineAnimation();
     std::cin.ignore();
 }

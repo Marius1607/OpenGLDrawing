@@ -44,6 +44,7 @@
 			<Add library="gdi32" />
 			<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/lib" />
 		</Linker>
+		<Unit filename="include/Airplane.h" />
 		<Unit filename="include/EngineGlut.h" />
 		<Unit filename="include/GlutData.h" />
 		<Unit filename="include/GlutDrawing.h" />
@@ -52,6 +53,7 @@
 		<Unit filename="include/Rectangle.h" />
 		<Unit filename="include/Triangle.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Airplane.cpp" />
 		<Unit filename="src/EngineGlut.cpp" />
 		<Unit filename="src/GlutData.cpp" />
 		<Unit filename="src/GlutDrawing.cpp" />
