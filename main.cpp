@@ -7,6 +7,7 @@
 #include <Triangle.h>
 #include <Rectangle.h>
 #include <Airplane.h>
+#include <Robot.h>
 
 #define PI 3.1415
 void drawSinus()
@@ -37,31 +38,61 @@ void drawLineAnimation()
 
 void testLine()
 {
-    Line line(0,0, 0, 290);
+    Line line(0,30, 100, 30);
+    line.draw();
+    line.print();
+}
+
+void testZoomLine()
+{
+    Line line(0,0,100,0);
+    line * 2;
     line.draw();
 }
 
 void testTriangle()
 {
-    Triangle triangle(0,0,-10,-20,10,-20,false);
+    Triangle triangle(0,0, -30, -30, -30, 30, true);
     triangle.draw();
+    triangle.print();
 }
 
+void testZoomTriangle(){
+    Triangle triangle(0,0, -30, -30, -30, 30, false);
+    triangle * 2;
+    triangle.draw();
+}
 void testPoint()
 {
-    Point point(500, 500);
+    Point point(100, 200);
     point.draw();
+    point.print();
 }
 
 void testRectangle()
 {
-    Rectangle rectangle(200, 200, 50, 500, true);
+    Rectangle rectangle(0, 0, 50, 50, true);
+    rectangle.draw();
+    rectangle.print();
+}
+
+void testZoomRectangle()
+{
+    Rectangle rectangle(0, 0, 50, 50, false);
+    rectangle * 2;
     rectangle.draw();
 }
 
 int main(int argc, char ** argv)
 {
+    initEngineGlut(argc, argv);
+    testTriangle();
+    testZoomTriangle();
+    //Robot robot;
+    //robot.draw();
+    //Airplane air;
+    //air.draw();
 
-    testRectangle();
+    //drawLineAnimation();
     std::cin.ignore();
 }

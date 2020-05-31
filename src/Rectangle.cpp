@@ -1,9 +1,17 @@
 #include "Rectangle.h"
 #include <EngineGlut.h>
-
+#include <iostream>
 Rectangle::Rectangle()
 {
-    //ctor
+    this -> a.setX(100);
+    this -> a.setY(100);
+    this -> b.setX(-100);
+    this -> b.setY(100);
+    this -> c.setX(50);
+    this -> c.setY(30);
+    this -> d.setX(-30);
+    this -> d.setY(50);
+    this -> fullDraw = false;
 }
 
 Rectangle::~Rectangle()
@@ -35,19 +43,45 @@ Rectangle::Rectangle(double x, double y, double height, double width, bool fullD
     this -> fullDraw = fullDraw;
 }
 
+Rectangle Rectangle::operator*(float n)
+{
+    this -> b.setX(this->b.getX() * n);
+    this -> b.setY(this->b.getY() * n);
+    this -> c.setX(this->c.getX() * n);
+    this -> c.setY(this->c.getY() * n);
+    this -> d.setX(this->d.getX() * n);
+    this -> d.setY(this->d.getY() * n);
+}
+
 void Rectangle::draw(){
-    EngineGlut e;
     if (this -> fullDraw)
     {
-        e.drawSurface(this -> a.getX(), this -> a.getY(), this -> b.getX(), this -> b.getY(), this -> c.getX(), this -> c.getY());
-        e.drawSurface(this -> d.getX(), this -> d.getY(), this -> b.getX(), this -> b.getY(), this -> c.getX(), this -> c.getY());
+        this->e.drawSurface(this -> a.getX(), this -> a.getY(), this -> b.getX(), this -> b.getY(), this -> c.getX(), this -> c.getY());
+        this->e.drawSurface(this -> d.getX(), this -> d.getY(), this -> b.getX(), this -> b.getY(), this -> c.getX(), this -> c.getY());
     }
 
     else {
-        e.drawLine(this -> a.getX(), this -> a.getY(), this -> b.getX(), this -> b.getY());
-        e.drawLine(this -> b.getX(), this -> b.getY(), this -> d.getX(), this -> d.getY());
-        e.drawLine(this -> d.getX(), this -> d.getY(), this -> c.getX(), this -> c.getY());
-        e.drawLine(this -> c.getX(), this -> c.getY(), this -> a.getX(), this -> a.getY());
+        this->e.drawLine(this -> a.getX(), this -> a.getY(), this -> b.getX(), this -> b.getY());
+        this->e.drawLine(this -> b.getX(), this -> b.getY(), this -> d.getX(), this -> d.getY());
+        this->e.drawLine(this -> d.getX(), this -> d.getY(), this -> c.getX(), this -> c.getY());
+        this->e.drawLine(this -> c.getX(), this -> c.getY(), this -> a.getX(), this -> a.getY());
 
     }
+}
+
+void Rectangle::print(){
+    std::cout << *this;
+}
+
+ostream& operator<<(ostream& os, const Rectangle &r)
+{
+    os << "The X coordinate of the point A: " << r.a.getX() << endl;
+    os << "The Y coordinate of the point A: " << r.a.getY() << endl;
+    os << "The X coordinate of the point B: " << r.b.getX() << endl;
+    os << "The Y coordinate of the point B: " << r.b.getY() << endl;
+    os << "The X coordinate of the point C: " << r.c.getX() << endl;
+    os << "The Y coordinate of the point C: " << r.c.getY() << endl;
+    os << "The X coordinate of the point D: " << r.d.getX() << endl;
+    os << "The Y coordinate of the point D: " << r.d.getY() << endl;
+    return os;
 }

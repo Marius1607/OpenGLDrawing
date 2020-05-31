@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1589984535 source:c:\users\mariu\onedrive\desktop\drawing\main.cpp
+1589627927 source:c:\users\mariu\onedrive\desktop\drawing\main.cpp
 	<iostream>
 	<unistd.h>
 	<math.h>
@@ -8,7 +8,6 @@
 	<Line.h>
 	<Triangle.h>
 	<Rectangle.h>
-	<Airplane.h>
 
 1589488272 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
 	"freeglut_std.h"
@@ -351,19 +350,112 @@
 1589627488 c:\users\mariu\onedrive\desktop\drawing\include\triangle.h
 	<Point.h>
 
-1589628016 source:c:\users\mariu\onedrive\desktop\drawing\src\rectangle.cpp
+1589626751 source:c:\users\mariu\onedrive\desktop\drawing\src\rectangle.cpp
 	"Rectangle.h"
 	<EngineGlut.h>
 
 1589627863 c:\users\mariu\onedrive\desktop\drawing\include\rectangle.h
 	<Point.h>
 
-1589984551 source:c:\users\mariu\onedrive\desktop\drawing\src\airplane.cpp
+1590926880 source:c:\users\mariu\onedrive\desktop\projects_homework\drawing\main.cpp
+	<iostream>
+	<unistd.h>
+	<math.h>
+	"EngineGlut.h"
+	<Point.h>
+	<Line.h>
+	<Triangle.h>
+	<Rectangle.h>
+	<Airplane.h>
+	<Robot.h>
+
+1589991873 c:\users\mariu\onedrive\desktop\projects_homework\drawing\include\engineglut.h
+
+1590921783 c:\users\mariu\onedrive\desktop\projects_homework\drawing\include\point.h
+	<Shape.h>
+	<ostream>
+
+1590921280 c:\users\mariu\onedrive\desktop\projects_homework\drawing\include\line.h
+	<Point.h>
+	<Shape.h>
+	<ostream>
+
+1590922462 c:\users\mariu\onedrive\desktop\projects_homework\drawing\include\triangle.h
+	<Point.h>
+	<Shape.h>
+
+1590922606 c:\users\mariu\onedrive\desktop\projects_homework\drawing\include\rectangle.h
+	<Point.h>
+
+1589991874 source:c:\users\mariu\onedrive\desktop\projects_homework\drawing\src\engineglut.cpp
+	"EngineGlut.h"
+	"GlutData.h"
+	"GlutDrawing.h"
+
+1589991873 c:\users\mariu\onedrive\desktop\projects_homework\drawing\include\glutdata.h
+	<list>
+	<pthread.h>
+
+1589991873 c:\users\mariu\onedrive\desktop\projects_homework\drawing\include\glutdrawing.h
+
+1589991874 source:c:\users\mariu\onedrive\desktop\projects_homework\drawing\src\glutdata.cpp
+	<stdlib.h>
+	<iostream>
+	"GlutData.h"
+	<pthread.h>
+
+1589991874 source:c:\users\mariu\onedrive\desktop\projects_homework\drawing\src\glutdrawing.cpp
+	"GlutDrawing.h"
+	"GlutData.h"
+	<windows.h>
+	<stdlib.h>
+	<GLUT/glut.h>
+	<OpenGL/glu.h>
+	<GL/freeglut.h>
+	<GL/glu.h>
+	<pthread.h>
+
+1590928022 source:c:\users\mariu\onedrive\desktop\projects_homework\drawing\src\line.cpp
+	"Line.h"
+	"EngineGlut.h"
+	<iostream>
+
+1590921668 source:c:\users\mariu\onedrive\desktop\projects_homework\drawing\src\point.cpp
+	"Point.h"
+	"EngineGlut.h"
+	<iostream>
+
+1590928209 source:c:\users\mariu\onedrive\desktop\projects_homework\drawing\src\rectangle.cpp
+	"Rectangle.h"
+	<EngineGlut.h>
+	<iostream>
+
+1590928335 source:c:\users\mariu\onedrive\desktop\projects_homework\drawing\src\triangle.cpp
+	"Triangle.h"
+	<EngineGlut.h>
+	<iostream>
+
+1590925866 source:c:\users\mariu\onedrive\desktop\projects_homework\drawing\src\airplane.cpp
 	"Airplane.h"
 	<Triangle.h>
 
-1589984432 c:\users\mariu\onedrive\desktop\drawing\include\airplane.h
+1590922886 c:\users\mariu\onedrive\desktop\projects_homework\drawing\include\airplane.h
+	<Triangle.h>
+	<Point.h>
+	<Rectangle.h>
+
+1590922299 c:\users\mariu\onedrive\desktop\projects_homework\drawing\include\shape.h
+	<EngineGlut.h>
+
+1590922252 source:c:\users\mariu\onedrive\desktop\projects_homework\drawing\src\shape.cpp
+	"Shape.h"
+
+1590927872 source:c:\users\mariu\onedrive\desktop\projects_homework\drawing\src\robot.cpp
+	"Robot.h"
+
+1590927331 c:\users\mariu\onedrive\desktop\projects_homework\drawing\include\robot.h
 	<Triangle.h>
 	<Rectangle.h>
+	<Line.h>
 	<Point.h>
 
